@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+
+    volumes:
+      - ../..:/workspaces:cached
+
+    command: sleep infinity
+
+  valkey:
+    image: valkey/valkey
+
+  vector-db:
+    image: qdrant/qdrant
+    ports:
+      - 6333:6333

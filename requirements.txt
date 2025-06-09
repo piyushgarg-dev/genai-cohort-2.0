@@ -30,6 +30,10 @@ langchain-core==0.3.64
 langchain-openai==0.3.21
 langchain-qdrant==0.2.0
 langchain-text-splitters==0.3.8
+langgraph==0.4.8
+langgraph-checkpoint==2.0.26
+langgraph-prebuilt==0.2.2
+langgraph-sdk==0.1.70
 langsmith==0.3.45
 marshmallow==3.26.1
 multidict==6.4.4
@@ -37,6 +41,7 @@ mypy_extensions==1.1.0
 numpy==2.2.6
 openai==1.82.0
 orjson==3.10.18
+ormsgpack==1.10.0
 packaging==24.2
 portalocker==2.10.1
 propcache==0.3.1
@@ -64,5 +69,6 @@ typing-inspection==0.4.1
 typing_extensions==4.13.2
 urllib3==2.4.0
 uvicorn==0.34.3
+xxhash==3.5.0
 yarl==1.20.0
 zstandard==0.23.0

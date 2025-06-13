@@ -26,8 +26,6 @@ graph_builder.add_node("chat_node", chat_node)
 graph_builder.add_edge(START, "chat_node")
 graph_builder.add_edge("chat_node", END)
 
-graph = graph_builder.compile()
-
 
 def compile_graph_with_checkpointer(checkpointer):
     graph_with_checkpointer = graph_builder.compile(checkpointer=checkpointer)

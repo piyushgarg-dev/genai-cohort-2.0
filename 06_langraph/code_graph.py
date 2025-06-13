@@ -154,9 +154,12 @@ def main():
         "llm_result": None
     }
 
-    response = graph.invoke(_state)
+    for event in graph.stream(_state):
+        print("Event", event)
 
-    print(response)
+    # response = graph.invoke(_state)
+
+    # print(response)
 
 
 main()

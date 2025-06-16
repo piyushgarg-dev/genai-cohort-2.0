@@ -27,5 +27,22 @@ services:
     volumes:
       - mongodb_data:/data/db
 
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - neo4j_data:/data
+    environment:
+      NEO4J_AUTH: neo4j/reform-william-center-vibrate-press-5829
+      NEO4JLABS_PLUGINS: '["apoc"]'
+      NEO4J_dbms_security_procedures_unrestricted: 'apoc.*,apoc.meta.*'
+      NEO4J_dbms_security_procedures_allowlist: 'apoc.*,apoc.meta.*'
+      NEO4J_apoc_import_file_enabled: 'true'
+      NEO4J_apoc_export_file_enabled: 'true'
+      NEO4J_apoc_import_file_use__neo4j__config: 'true'
+
 volumes:
   mongodb_data:
+  neo4j_data:
